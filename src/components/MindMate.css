@@ -1,0 +1,107 @@
+.mindmate-container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-box {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-box:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px #007bff;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.send-btn, .mic-btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.send-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.send-btn:hover:not(:disabled),
+.mic-btn:hover {
+  background-color: #0056b3;
+}
+
+.mic-btn.listening {
+  background-color: #dc3545; /* red when listening */
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+  70% { box-shadow: 0 0 10px 10px rgba(220, 53, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+.response-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-size: 18px;
+  min-height: 90px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Mood colors */
+.mood-happy {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mood-sad {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.mood-angry {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.mood-neutral {
+  background-color: #e2e3e5;
+  color: #383d41;
+  border: 1px solid #d6d8db;
+}
